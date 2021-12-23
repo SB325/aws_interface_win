@@ -1,0 +1,24 @@
+echo off 
+:: Clear terminal 
+cls
+
+:: Return all available instances
+aws ec2 describe-instances --query "Reservations[*].Instances[*].[Tags[].Value[],InstanceId]" --output=text
+
+:: Prompt user for instance id to run
+set /P id="Enter Desired ID:"
+echo "Use this command: "
+echo "aws ssm start-session --target %id%"
+
+:: Get state of ec2 instance
+aws ec2 describe-instance-status --instance-ids i-0cd2a955830fb3aae --query "InstanceStatuses[*].InstanceState.Name" --output text
+
+:: filter instances by state
+aws ec2 describe-instances --filters Name=instance-state-name,Value=stopped {pending | running | shutting-down | terminated | stopping | stopped }
+
+:: start ec2 instance
+aws ec2 start-instances --instance-ids <instance-id>
+
+:: stop ec2 instance
+aws ec2 stop-instances --instance-ids <instance-id>
+
