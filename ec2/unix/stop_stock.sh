@@ -1,8 +1,5 @@
-@echo off
-setlocal
-cls
+#!/bin/bash
 
-call ec2_ids.bat
-
-aws ec2 stop-instances --instance-ids %stock-ec2-id%
+source ec2_ids.sh
+aws ec2 stop-instances --instance-ids $stock_ec2_id
 

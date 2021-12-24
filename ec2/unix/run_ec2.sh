@@ -1,30 +1,24 @@
-@echo off
-setlocal
-cls
+#!/bin/bash
 
-if "%~1"=="" (
-    echo No parameters have been provided.
-    echo
-    echo Arguments:
-    echo main"
-    echo stock"
-    exit /b 0
-    )
+source ec2_ids.sh
 
-IF "%1"=="main" (
-    ::echo "Starting main EC2 Instance"
-    SET "instance=i-0cd2a955830fb3aae"
+if "$1"=="" (
+    echo "No parameters have been provided."
+    echo "Please add \"stock\" as argument"
     )
-IF "%1"=="stock" (
-    ::echo "Starting stock EC2 Instance"
-    SET "instance=i-0318bdd3d94e05756"
-    )
+fi
 
-IF "%instance%"=="" (
-    echo "The instance id %instance% is empty! Exiting."
-    exit /b 0) ELSE (
-    echo "The instance id %instance% (%1) is starting!"
-    aws ssm start-session --target %instance%
+if "%0"=="stock" (
+    echo "Starting stock EC2 Instance"
+    instance="i-0318bdd3d94e05756"
     )
-    
-endlocal
+fi
+
+if "%instance%"=="$stock_ec2_id" (
+    echo "The instance id $instance is empty! Exiting."
+    ) else (
+    echo "The instance id $instance ($0) is starting!"
+    aws ssm start-session --target $instance
+    )
+fi
+

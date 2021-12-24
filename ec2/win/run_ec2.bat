@@ -24,7 +24,7 @@ IF "%instance%"=="" (
     echo "The instance id %instance% is empty! Exiting."
     exit /b 0) ELSE (
     echo "Starting SSM connection to: %1"
-    call start_%1%.bat
+    ::call start_%1%.bat
     aws ssm start-session --target %instance%
     call stop_%1%.bat
     )
