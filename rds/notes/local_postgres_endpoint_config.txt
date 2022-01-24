@@ -1,0 +1,13 @@
+https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html
+
+Enabling CDC using a self-managed PostgreSQL database as a AWS DMS source
+AWS DMS supports change data capture (CDC) using logical replication. To enable logical replication of a self-managed PostgreSQL source database, set the following parameters and values in the postgresql.conf configuration file:
+
+Set wal_level = logical.
+Set max_replication_slots to a value greater than 1.
+Set max_wal_senders to a value greater than 1.
+Set wal_sender_timeout =0.
+
+Set these values in <postgres_folder>\data\postgresql.conf OR in the Postgresql query tool [ ALTER SYSTEM SET <parameter> = <option> ]
+
+
