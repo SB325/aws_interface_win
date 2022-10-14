@@ -1,0 +1,21 @@
+Endpoint ARN
+
+arn:aws:dms:us-east-1:402190697031:endpoint:remotedb-arn
+Endpoint engine
+PostgreSQL
+Endpoint type
+Target
+User name
+postgresadmin
+KMS ARN / ID
+arn:aws:kms:us-east-1:402190697031:key/32da1afe-9e41-459b-95f6-54501c8a21cf
+Status
+ Active
+ SSL mode
+ None
+ Server name
+ market-db-1.cqntsr6agzce.us-east-1.rds.amazonaws.com
+ Port
+ 5432
+ Database name
+ postgresdb

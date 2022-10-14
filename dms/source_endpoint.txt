@@ -1,0 +1,30 @@
+Endpoint identifier
+local-endpoint
+Endpoint ARN
+arn:aws:dms:us-east-1:402190697031:endpoint:GWXH24VC22SKB4VBZJNYI7Z245I5DIBJLW5ASFI
+Endpoint engine
+PostgreSQL
+Endpoint type
+Source
+User name
+postgres
+KMS ARN / ID
+arn:aws:kms:us-east-1:402190697031:key/32da1afe-9e41-459b-95f6-54501c8a21cf
+Status
+ Active
+ SSL mode
+ None
+ Server name
+ bridge.halfascrunchy.com
+ Port
+ 5432
+ Database name
+ postgres
+
+
+
+Endpoint settings
+
+Extra connection attributes
+pluginName=test_decoding
+

@@ -1,0 +1,62 @@
+pgmigration
+
+
+Actions
+Replication instance summary
+Class
+dms.t3.micro
+Engine version
+3.4.6
+Status
+ Available
+ Associated migration tasks
+ 1
+=================================================
+
+Details
+Basic configuration
+
+ARN
+
+arn:aws:dms:us-east-1:402190697031:rep:pg-migration-arn
+Public IP address
+184.72.146.48
+Instance class
+dms.t3.micro
+Status
+ Available
+ Private IP address
+ 172.31.78.177
+ Free instance expiration
+ N/A
+
+
+ Advanced security and network configuration
+
+ Multi AZ
+ No
+ Publicly accessible
+ Yes
+ Allocated storage (GiB)
+ 500
+ Created
+ January 4, 2022, 06:09:43 (UTC-05:00)
+ Availability zone
+ us-east-1f
+ Replication subnet group
+ default-vpc-04709f628606c64ad
+ VPC security group(s)
+ sg-0959ac31f6ce1240f
+ KMS key
+ arn:aws:kms:us-east-1:402190697031:key/32da1afe-9e41-459b-95f6-54501c8a21cf
+
+
+ Maintenance
+
+ Minor version automatic upgrade
+ Yes
+ Pending modify values
+ None
+ Maintenance window
+ Saturday at 00:00 (UTC) for 0.5 hour(s)
+
